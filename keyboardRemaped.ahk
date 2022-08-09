@@ -1,0 +1,24 @@
+!i::Send {:}
+!k::Send {}}
+!ö::Send {;}
+!j::Send {{}
+!l::Send {=}
+!u::Send {-}
+!o::Send {+}
+!a::Send {!}
+!s::Send {*}
+!d::Send {$}
+!f::Send {'}
+!w::Send {(}
+!e::Send {)}
+!x::Send {[}
+!c::Send {]}
+!h::Send {#}  
+!q::Send {?}
+!n::Send {/}
+!m::Send {\}
+!y::Send {`}
+!v::Send {´}
+;!^o::Send ^{TAB}    
+;!+o::Send +{TAB}    
+
