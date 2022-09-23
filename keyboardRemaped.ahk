@@ -1,24 +1,30 @@
 !i::Send {:}
-!k::Send {}}
+!k::Send {{}
 !ö::Send {;}
-!j::Send {{}
+!j::Send {}}
 !l::Send {=}
 !u::Send {-}
 !o::Send {+}
-!a::Send {!}
+!a::Send {@}
 !s::Send {*}
 !d::Send {$}
 !f::Send {'}
-!w::Send {(}
-!e::Send {)}
+!w::Send {[}
+!e::Send {]}
 !x::Send {[}
 !c::Send {]}
-!h::Send {#}  
+!h::Send {asc 0037}
 !q::Send {?}
 !n::Send {/}
 !m::Send {\}
 !y::Send {`}
 !v::Send {´}
-;!^o::Send ^{TAB}    
-;!+o::Send +{TAB}    
-
+!g::Send {"}
+!ä::Send {!}
+!t::Send {*}
+!z::Send {asc 0037}
+!^o::Send ^{TAB}    
+!+o::Send ^+{TAB}   
+~RButton & ~MButton::send {Browser_Back}
+~MButton & ~RButton::send {Browser_Forward}
+~LButton & ~MButton::send ^w
