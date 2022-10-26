@@ -1,3 +1,8 @@
+Menu, Tray, Icon , Shell32.dll, 25, 1
+TrayTip, AutoHotKey, Started, 1
+SoundBeep, 3000, 200
+Return
+
 !i::Send {:}
 !k::Send {{}
 !ö::Send {;}
@@ -29,3 +34,27 @@
 ~RButton & ~MButton::send {Browser_Back}
 ~MButton & ~RButton::send {Browser_Forward}
 ~LButton & ~MButton::send ^w
+
+::dlss::
+Run, %userprofile%\downloads
+return
+
+::usrss::
+Run, %userprofile%
+return
+
+::ahkss::
+Run, neovide "%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+return
+
+::gglss::
+Run, "https://www.google.com/search?q="
+return
+
+::openc::
+Run, "C:\"
+return
+
+::rahk::
+Reload
+Return
