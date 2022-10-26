@@ -58,3 +58,8 @@ return
 ::rahk::
 Reload
 Return
+
+::timenow::
+FormatTime, CurrentDateTime, , M/d/yyyy h:mm tt
+SendInput %CurrentDateTime%
+return
