@@ -26,7 +26,7 @@ Return
 !m::Send {\}
 !y::Send {`}
 !v::Send {´}
-!g::Send {"}
+!g::Send {%}
 !ä::Send {!}
 !t::Send {*}
 !z::Send {asc 0037}
