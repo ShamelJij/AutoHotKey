@@ -26,7 +26,7 @@ Return
 !m::Send {\}
 !y::Send {`}
 !v::Send {´}
-!g::Send {%}
+!g::Send {&}
 !ä::Send {!}
 !t::Send {*}
 !z::Send {asc 0037}
@@ -73,7 +73,7 @@ Reload
 Return
 
 ::timenow::
-FormatTime, CurrentDateTime, , M/d/dddd/yyyy h:mm tt
+FormatTime, CurrentDateTime, , dddd/d/M/yyyy h:mm tt
 SendInput %CurrentDateTime%
 Return
 
