@@ -145,3 +145,5 @@ AppsKey::ToolTip Press < or > to cycle through windows.
 AppsKey Up::ToolTip
 ~AppsKey & <::Send !+{Esc}
 ~AppsKey & >::Send !{Esc}
+
+; https://mixkit.co/free-sound-effects/sci-fi/ (construction.wav)
