@@ -1,4 +1,6 @@
 ﻿; Don't forget to save the file as UTF-8 with BOM
+GroupAdd,ExplorerGroup, ahk_class CabinetWClass
+GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ;#Warn  ; Enable warnings to assist with detecting common errors.
@@ -10,9 +12,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 myicon = %A_AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startahk\bunting.ico 
 Menu, Tray, Icon , %myicon% ;, 25, 1 
 TrayTip, AutoHotKey, Started, 1 
-SoundPlay, %A_ScriptDir%\startahk\moz.wav   
-;SoundBeep, 3000, 800
-Return
+SoundBeep, 3000, 800
+SoundPlay, %A_ScriptDir%\startahk\moz.wav
+sleep 1000
+GroupAdd, Explorer, ahk_class CabinetWClass ahk_exe Explorer.EXE
+groupClose, Explorer, A     
+Return 
+
+GroupAdd,ExplorerGroup, ahk_class CabinetWClass
+GroupAdd,ExplorerGroup, ahk_class ExploreWClass
+
+; close all Explorer windows when Winkey x pressed
+;#t::  ;  Win Key + j
+;WinClose, ahk_class CabinetWClass  ;  closes any explorer window
+;return
 
 !i::Send {:}
 !k::Send {{}
@@ -133,7 +146,7 @@ return
 }
 
 ::examplez3::
-msgbox, 1, this is a title, are you seeing these?
+msgbox, 1, this is a title, are you seeing these? 
 return
 
 ::examplez4::
@@ -148,7 +161,7 @@ IF !ErrorLevel
 IF NCtrl = 4
 ;msgBox, you pressed 4 üs in less than a fifth of a second.
 ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
-SoundPlay, mozart.wav
+SoundPlay, %A_ScriptDir%\startahk\moz.wav 
 Return
 DelNCtrl:
 NCtrl =
@@ -158,6 +171,3 @@ AppsKey::ToolTip Press < or > to cycle through windows.`rsomethinghere
 AppsKey Up::ToolTip
 ~AppsKey & <::Send !+{Esc}
 ~AppsKey & >::Send !{Esc}
-
-; https://mixkit.co/free-sound-effects/sci-fi/ (construction.wav)
-;https://upload.wikimedia.org/wikipedia/commons/a/ae/Mozart%2C_from_Piano_Sonata_K310%2C_first_movement.wav
