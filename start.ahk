@@ -1,4 +1,4 @@
-﻿; $env:myStart\startApps
+﻿; copy-Item -Path @("$env:myStart\startApps\start.ahk", "$env:myStart\startApps\startahk") -Destination "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"; $env:myStart\startApps
 ; Don't forget to save the file as UTF-8 with BOM
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
@@ -7,18 +7,18 @@ GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 ;#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;moricons.dll 
+;moricons.dll
 ;, 25, 1  C:\Users\jijs\AppData\Roaming
-;EnvGet, upr, userprofile  
-myicon = %A_AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startahk\bunting.ico 
-Menu, Tray, Icon , %myicon% ;, 25, 1 
-TrayTip, AutoHotKey, Started, 1 
+;EnvGet, upr, userprofile
+myicon = %A_AppData%\Microsoft\Windows\Start Menu\Programs\Startup\startahk\bunting.ico
+Menu, Tray, Icon , %myicon% ;, 25, 1
+TrayTip, AutoHotKey, Started, 1
 SoundBeep, 3000, 800
 SoundPlay, %A_ScriptDir%\startahk\moz.wav
 sleep 1000
 GroupAdd, Explorer, ahk_class CabinetWClass ahk_exe Explorer.EXE
-groupClose, Explorer, A     
-Return 
+groupClose, Explorer, A
+Return
 
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
@@ -71,8 +71,8 @@ GroupAdd,ExplorerGroup, ahk_class ExploreWClass
 ::symlink::new-item -itemtype symboliclink -path "pointer" -target "target.file"
 Return
 
-::dlss:: 
-Run, C:\Users\jijs\Downloads 
+::dlss::
+Run, C:\Users\jijs\Downloads
 return
 
 ::userss::
@@ -147,7 +147,7 @@ return
 }
 
 ::examplez3::
-msgbox, 1, this is a title, are you seeing these? 
+msgbox, 1, this is a title, are you seeing these?
 return
 
 ::examplez4::
@@ -162,13 +162,13 @@ IF !ErrorLevel
 IF NCtrl = 4
 ;msgBox, you pressed 4 üs in less than a fifth of a second.
 ;DllCall("PowrProf\SetSuspendState", "int", 1, "int", 0, "int", 0)
-SoundPlay, %A_ScriptDir%\startahk\moz.wav 
+SoundPlay, %A_ScriptDir%\startahk\moz.wav
 Return
 DelNCtrl:
 NCtrl =
 Return
 
-AppsKey::ToolTip Press < or > to cycle through windows.`rsomethinghere 
+AppsKey::ToolTip Press < or > to cycle through windows.`rsomethinghere
 AppsKey Up::ToolTip
 ~AppsKey & <::Send !+{Esc}
 ~AppsKey & >::Send !{Esc}
