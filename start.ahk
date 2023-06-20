@@ -1,4 +1,4 @@
-﻿; %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
+﻿; $env:myStart\startApps
 ; Don't forget to save the file as UTF-8 with BOM
 GroupAdd,ExplorerGroup, ahk_class CabinetWClass
 GroupAdd,ExplorerGroup, ahk_class ExploreWClass
